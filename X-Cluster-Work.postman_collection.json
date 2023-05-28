@@ -1,0 +1,504 @@
+{
+	"info": {
+		"_postman_id": "8c855700-72bc-4602-8a28-618e334b8956",
+		"name": "X-Cluster/Work",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20957428",
+		"_collection_link": "https://orange-zodiac-923116.postman.co/workspace/X-Work~5128fc4a-8292-4d78-874b-27ff0697add9/collection/20957428-8c855700-72bc-4602-8a28-618e334b8956?action=share&creator=20957428&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Изменить роль пользователя",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTM2NDExNDQsIlVzZXJJRCI6IjYwZTgxY2Y5OGM3OTQ0ZGYyNGNmZWI5OSIsIklzQWRtaW4iOnRydWUsIlRpbWUiOiIyMDIyLTA1LTI3VDA4OjE1OjQ0LjgwMDE2MzAxWiJ9.a3RE-Zw19PtCD3Qwlj28o0WlL0DTCDAnjAkw-AAloz8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cluster-dev.ru/b/admin/set/role?user_id=628f43c1b667875d1d25dd88&role=3",
+					"protocol": "https",
+					"host": [
+						"cluster-dev",
+						"ru"
+					],
+					"path": [
+						"b",
+						"admin",
+						"set",
+						"role"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "628f43c1b667875d1d25dd88"
+						},
+						{
+							"key": "role",
+							"value": "3"
+						},
+						{
+							"key": "percent",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PROD Изменить роль пользователя",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTAzODA0ODksIlVzZXJJRCI6IjYwZTgxY2Y5OGM3OTQ0ZGYyNGNmZWI5OSIsIklzQWRtaW4iOnRydWUsIlRpbWUiOiIyMDIyLTA0LTE5VDE0OjMxOjI5LjkzMDA4OTk3MVoifQ.GyhGxPXyQnTZumQRdB5tSElnde299oUhSn2AIc1urAQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rhacchua.x-cluster.com/b/admin/set/role?user_id=61b766486b601e2aa474ef9d&role=4&percent=1",
+					"protocol": "https",
+					"host": [
+						"rhacchua",
+						"x-cluster",
+						"com"
+					],
+					"path": [
+						"b",
+						"admin",
+						"set",
+						"role"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "61b766486b601e2aa474ef9d"
+						},
+						{
+							"key": "role",
+							"value": "4"
+						},
+						{
+							"key": "percent",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавление пользователя в white list DEV",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\"name\": \"Александра Кошелева\", \n   \"id\": \"61e54efd6b601e2aa485071a\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cluster-dev.ru/b/user/set/white_list",
+					"protocol": "https",
+					"host": [
+						"cluster-dev",
+						"ru"
+					],
+					"path": [
+						"b",
+						"user",
+						"set",
+						"white_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PROD Добавление пользователя в white list",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Получение пользователей в white list DEV",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiI2MjhmNDNjMWI2Njc4NzVkMWQyNWRkODgiLCJJc0FkbWluIjpmYWxzZSwiVGltZSI6IjIwMjItMDktMDJUMTQ6MDQ6NDUuNDg0MzcwNzg2WiJ9.XbltzGfhACdu0L1zM0ykthfsuKE1k5vqbWrhwXPL2T0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cluster-dev.ru/b/user/get/white_list",
+					"protocol": "https",
+					"host": [
+						"cluster-dev",
+						"ru"
+					],
+					"path": [
+						"b",
+						"user",
+						"get",
+						"white_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Изменить статус отклика",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDk5MjkyMTQsIlVzZXJJRCI6IjYwZTgxY2Y5OGM3OTQ0ZGYyNGNmZWI5OSIsIklzQWRtaW4iOnRydWUsIlRpbWUiOiIyMDIyLTA0LTE0VDA5OjEwOjE0LjkzNDc2NDUyMVoifQ.vM6RxGXlW-GOaUyJPwE5O780YNb0x1rQKNT8O_Ez65M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\": \"6257e25f7d50c946f2a91a6a\",\n\"status\":2,\n\"msg\": \"lyj\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://work.admin.cluster-dev.ru/b/respond/set/status",
+					"protocol": "https",
+					"host": [
+						"work",
+						"admin",
+						"cluster-dev",
+						"ru"
+					],
+					"path": [
+						"b",
+						"respond",
+						"set",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание вакансии с ссылкой на тестовое Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDY4MjY2NDksIlVzZXJJRCI6IjYwZTgxY2Y5OGM3OTQ0ZGYyNGNmZWI5OSIsIklzQWRtaW4iOnRydWUsIlRpbWUiOiIyMDIyLTAzLTA5VDExOjIwOjQ5LjUwMDkwOTg0N1oifQ.1dxitivAieNcMvtkKPVasG7b2t_AmFVrQSXWS58B4tg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"QaaaC\",\n    \"company_id\": \"612c8a547795328841d27fdd\",\n    \"max_payment\": 3,\n    \"min_payment\": 1,\n    \"currency_key\": \"rub\",\n    \"work_schedule\": [\n        1,\n        2\n    ],\n    \"min_exp\": 1,\n    \"max_exp\": 3,\n    \"subtitle\": \"1\",\n    \"desc\": \"1\",\n    \"is_beginner\": false,\n    \"skills\": [\n        {\n            \"key\": \"react\",\n            \"value\": 2\n        },\n        {\n            \"key\": \"svelte\",\n            \"value\": 1\n        },\n        {\n            \"key\": \"mobx\",\n            \"value\": 2\n        }\n    ],\n    \"details\": [\n        {\n            \"title\": \"1\",\n            \"desc\": \"1\",\n            \"newBlock\": true,\n            \"id\": 0\n        }\n    ],\n    \"test_source\": \"https://docs.google.com/document/d/1s_-7FbM-Uwk4ryxVvHB4nMrHlPlJQENNIivMTacGLMI/edit\",\n    \"is_test_file\": false,\n    \"file_name\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cluster-dev.ru/b/vacancy/create",
+					"protocol": "https",
+					"host": [
+						"cluster-dev",
+						"ru"
+					],
+					"path": [
+						"b",
+						"vacancy",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Drop DB ALL",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTA5NjMyMDMsIlVzZXJJRCI6IjYwZTgxY2Y5OGM3OTQ0ZGYyNGNmZWI5OSIsIklzQWRtaW4iOnRydWUsIlRpbWUiOiIyMDIyLTA0LTI2VDA4OjIzOjIzLjc3MTYzODIyN1oifQ.L0IhZveVm8DG0Kp9YPFnzOCBzWir-gQKCvi3vqwq_dk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"table_respond\": true,\n    \"responds\": [],\n    \"table_tt_work\": true,\n    \"works\": [],\n    \"table_contract\": true,\n    \"contracts\": [],\n    \"table_vacantion\": true,\n    \"vacancies\": [],\n    \"table_notif\": true,\n    \"notifs\": [],\n    \"table_recomend\": true,\n    \"recomends\": [],\n    \"table_suggest\": true,\n    \"suggests\": [],\n    \"table_company\": true,\n    \"companies\": [],\n    \"table_testing\": true,\n    \"testings\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cluster-dev.ru/b/core/clean/db",
+					"protocol": "https",
+					"host": [
+						"cluster-dev",
+						"ru"
+					],
+					"path": [
+						"b",
+						"core",
+						"clean",
+						"db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Изменить статус вакансии Copy 2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDY0MDU1OTAsIlVzZXJJRCI6IjYwZTgxY2Y5OGM3OTQ0ZGYyNGNmZWI5OSIsIklzQWRtaW4iOnRydWUsIlRpbWUiOiIyMDIyLTAzLTA0VDE0OjIzOjEwLjEwODk2ODQzMloifQ.nj8vrEtVqfN6hzoTmCeGJur8QFXJEINQF25cL4YecVg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cluster-dev.ru/b/vacancy/set/status?vacancy_id=62221a7a5a7685c98cb8e39e&status=2",
+					"protocol": "https",
+					"host": [
+						"cluster-dev",
+						"ru"
+					],
+					"path": [
+						"b",
+						"vacancy",
+						"set",
+						"status"
+					],
+					"query": [
+						{
+							"key": "vacancy_id",
+							"value": "62221a7a5a7685c98cb8e39e"
+						},
+						{
+							"key": "status",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Изменить статус вакансии Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDY0MDU1OTAsIlVzZXJJRCI6IjYwZTgxY2Y5OGM3OTQ0ZGYyNGNmZWI5OSIsIklzQWRtaW4iOnRydWUsIlRpbWUiOiIyMDIyLTAzLTA0VDE0OjIzOjEwLjEwODk2ODQzMloifQ.nj8vrEtVqfN6hzoTmCeGJur8QFXJEINQF25cL4YecVg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cluster-dev.ru/b/vacancy/set/status?vacancy_id=62221a7a5a7685c98cb8e39e&status=2",
+					"protocol": "https",
+					"host": [
+						"cluster-dev",
+						"ru"
+					],
+					"path": [
+						"b",
+						"vacancy",
+						"set",
+						"status"
+					],
+					"query": [
+						{
+							"key": "vacancy_id",
+							"value": "62221a7a5a7685c98cb8e39e"
+						},
+						{
+							"key": "status",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание вакансии с загрузкой тестового",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDY0MDgyMzksIlVzZXJJRCI6IjYwZTgxY2Y5OGM3OTQ0ZGYyNGNmZWI5OSIsIklzQWRtaW4iOnRydWUsIlRpbWUiOiIyMDIyLTAzLTA0VDE1OjA3OjE5Ljg3MjUwMDAzMloifQ.9tMAjLWwuMLTTc8Sywetq3JJyAiNIgHju2On4joi1Bo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Designer1\",\n    \"company_id\": \"6166f6e5164f1de2efb69708\",\n    \"max_payment\": 30000,\n    \"min_payment\": 10000,\n    \"currency_key\": \"rub\",\n    \"work_schedule\": [\n        1,\n        2\n    ],\n    \"min_exp\": 1,\n    \"max_exp\": 3,\n    \"subtitle\": \"1\",\n    \"desc\": \"11\",\n    \"is_beginner\": false,\n    \"skills\": [\n        {\n            \"key\": \"html5\",\n            \"value\": 1\n        },\n        {\n            \"key\": \"css3\",\n            \"value\": 2\n        }\n    ],\n    \"details\": [\n        {\n            \"title\": \"11\",\n            \"desc\": \"11\",\n            \"newBlock\": true,\n            \"id\": 0\n        }\n    ],\n    \"test_source\": \"data:application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,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\",\n    \"is_test_file\": true,\n    \"file_name\": \"Шаблон тестового задания x-work.docx\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cluster-dev.ru/b/vacancy/create",
+					"protocol": "https",
+					"host": [
+						"cluster-dev",
+						"ru"
+					],
+					"path": [
+						"b",
+						"vacancy",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создания контракта с ссылкой на тестовое Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDY0MDg3NzYsIlVzZXJJRCI6IjYwZTgxY2Y5OGM3OTQ0ZGYyNGNmZWI5OSIsIklzQWRtaW4iOnRydWUsIlRpbWUiOiIyMDIyLTAzLTA0VDE1OjE2OjE2LjM3MjQ5NDYyOVoifQ.zsVCowSi0kndgNr1yj8hiV_WRVXJMWVgUKZplNbR-ZA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Программисть\",\n    \"company_id\": \"620a64c6ddad4c738eddda87\",\n    \"duration_end\": \"2022-04-04T15:16:16.000Z\",\n    \"duration_start\": \"2022-03-04T15:16:16.252Z\",\n    \"currency_key\": \"rub\",\n    \"payment\": 20000,\n    \"min_exp\": 1,\n    \"max_exp\": 3,\n    \"subtitle\": \"1\",\n    \"desc\": \"1\",\n    \"is_beginner\": false,\n    \"skills\": [\n        {\n            \"key\": \"adobe_photoshop\",\n            \"value\": 1\n        },\n        {\n            \"key\": \"adobe_illustrator\",\n            \"value\": 1\n        }\n    ],\n    \"details\": [\n        {\n            \"title\": \"1\",\n            \"desc\": \"1\",\n            \"newBlock\": true,\n            \"id\": 0\n        }\n    ],\n    \"test_source\": \"https://docs.google.com/document/d/1s_-7FbM-Uwk4ryxVvHB4nMrHlPlJQENNIivMTacGLMI/edit\",\n    \"is_test_file\": false,\n    \"file_name\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cluster-dev.ru/b/contract/create",
+					"protocol": "https",
+					"host": [
+						"cluster-dev",
+						"ru"
+					],
+					"path": [
+						"b",
+						"contract",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание контракта с тестовым заданием (док)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDY0MDkwMDQsIlVzZXJJRCI6IjYwZTgxY2Y5OGM3OTQ0ZGYyNGNmZWI5OSIsIklzQWRtaW4iOnRydWUsIlRpbWUiOiIyMDIyLTAzLTA0VDE1OjIwOjA0LjQxNTU1NjU3M1oifQ.CF6tR4oYZAt5VLTqvQsWM0l5f6fp3_qblN3B0qdhE0s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Десигнерр\",\n    \"company_id\": \"620a64c6ddad4c738eddda87\",\n    \"duration_end\": \"2022-04-04T15:20:04.000Z\",\n    \"duration_start\": \"2022-03-04T15:20:04.218Z\",\n    \"currency_key\": \"rub\",\n    \"payment\": 100000,\n    \"min_exp\": 1,\n    \"max_exp\": 3,\n    \"subtitle\": \"1\",\n    \"desc\": \"1\",\n    \"is_beginner\": false,\n    \"skills\": [\n        {\n            \"key\": \"unity\",\n            \"value\": 1\n        },\n        {\n            \"key\": \"godot\",\n            \"value\": 2\n        }\n    ],\n    \"details\": [\n        {\n            \"title\": \"1\",\n            \"desc\": \"1\",\n            \"newBlock\": true,\n            \"id\": 0\n        }\n    ],\n    \"test_source\": \"data:application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,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\",\n    \"is_test_file\": true,\n    \"file_name\": \"Шаблон тестового задания x-work.docx\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cluster-dev.ru/b/contract/create",
+					"protocol": "https",
+					"host": [
+						"cluster-dev",
+						"ru"
+					],
+					"path": [
+						"b",
+						"contract",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
